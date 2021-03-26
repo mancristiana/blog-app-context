@@ -1,0 +1,27 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+button.button {
+    border: none;
+    background: hsl(288, 4%, 28%);
+    display: inline-flex;
+    flex-grow: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0.2em;
+    min-width: 50px;
+    width: auto;
+    padding: 0.6em 1.2em;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+
+}
+
+button.button:hover {
+    background: hsl(288, 4%, 40%);
+}

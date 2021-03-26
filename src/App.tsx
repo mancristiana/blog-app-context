@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+import React, { FunctionComponent } from "react";
+import { Accordion } from "./components/accordion/Accordion";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App: FunctionComponent = () => {
+    return (
+        <div className={styles.app}>
+            <div className={styles.header}>
+                <Accordion>
+                    <h1>Accordion</h1>
+                    <Accordion.CollapseButton>
+                        Show less
+                    </Accordion.CollapseButton>
+                    <p>
+                        In pharetra nibh massa, eu auctor nulla iaculis in.
+                        Phasellus aliquam luctus lacus eu ultrices. Donec
+                        suscipit nulla sed dapibus gravida. Maecenas placerat
+                        sed massa vel bibendum. Proin ullamcorper pulvinar
+                        efficitur.
+                        <Accordion.Collapsible>
+                            Vestibulum feugiat odio sit amet nibh mattis, id
+                            mollis quam tincidunt. Cras porta purus vel tellus
+                            semper, ac tincidunt sem auctor. Praesent justo
+                            eros, congue placerat quam eu, hendrerit tempor
+                            nulla. Sed finibus imperdiet venenatis. Curabitur
+                            non orci ac dui tincidunt vehicula. Sed gravida
+                            ultrices diam eu venenatis.
+                        </Accordion.Collapsible>
+                    </p>
 
-export default App;
+                    <Accordion.ExpandButton>
+                        Show more...
+                    </Accordion.ExpandButton>
+                    <Accordion.CollapseButton>
+                        Show less
+                    </Accordion.CollapseButton>
+                </Accordion>
+            </div>
+        </div>
+    );
+};
+
